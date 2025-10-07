@@ -1,0 +1,400 @@
+html {
+    scroll-behavior: smooth;/* by doing this if we click on buy this we will come down to product details*/
+  }
+  body {
+    font-family: "Lato", sans-serif;
+    padding: 0;
+    margin: 0;
+  }
+  nav {
+    background-color:rgb(3, 6, 2);
+    color:red ;
+    padding: 20px 50px;
+  }
+  .navTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .search {
+    display: flex;
+    align-items: center;
+    background-color:red;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+  .searchInput {
+    border: none;
+    background-color:transparent;
+  }
+  .searchInput::placeholder {
+    color: black;
+  }
+  .limitedOffer {
+    font-size: 20px;
+    border-bottom: 2px solid green;
+    cursor: pointer;
+  }
+  .navBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .menuItem {
+    margin-right: 50px;
+    cursor: pointer;
+    color: blue;
+    font-weight: 500;
+  }
+  .slider {
+    background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
+   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+    /* this clip path will put my image in whole screen*/
+    overflow: hidden;
+  }
+  /* in slidewrapper we use 1 second from coming second page*/
+  .sliderWrapper {
+    display: flex;
+    width: 500vw;
+    transition: all 1s ease-in-out;
+  }
+  .sliderItem {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .sliderBg {
+    width: 750px;
+    height: 750px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  .sliderImg {
+    z-index: 1;
+  }
+  /* in sliderTitle we are keeping jimmi chu in top right */
+  .sliderTitle {
+    position: absolute;
+    font-style:italic;
+    top: 10%;
+    right: 10%;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    color: white;
+    z-index: 1;
+  }
+  /*in sliderPrice we are keeping price in top left */
+  .sliderPrice {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-weight:900;
+    font-size: 60px;
+    font-weight: 300;
+    text-align: center;
+    color: white;
+    border: 1px solid gray;
+    z-index: 1;
+  }
+  /*in  buy button we keeping button in top right */
+  .buyButton {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    font-size: 30px;
+    font-weight: 900;
+    color: white;
+    border: 1px solid gray;
+    background-color: black;
+    z-index: 1;
+    cursor: pointer;
+  }
+  /* by using hover ,it do effect on my buy this button */
+  .buyButton:hover {
+    background-color: white;
+    color:maroon ;
+  }
+/*by using slideritem:nth-child we are changing our bg color for different shoes*/
+  .sliderItem:nth-child(1) .sliderBg {
+    background-color: #369e62;
+  }
+  .sliderItem:nth-child(2) .sliderBg {
+    background-color: rebeccapurple;
+  }
+  .sliderItem:nth-child(3) .sliderBg {
+    background-color: teal;
+  }
+  .sliderItem:nth-child(4) .sliderBg {
+    background-color: cornflowerblue;
+  }
+  .sliderItem:nth-child(5) .sliderBg {
+    background-color: rgb(234, 202, 76);
+  }
+  .sliderItem:nth-child(1) .sliderPrice {
+    color: #369e62;
+  }
+  .sliderItem:nth-child(2) .sliderPrice {
+    color: white;
+  }
+  .sliderItem:nth-child(3) .sliderPrice {
+    color: teal;
+  }
+  .sliderItem:nth-child(4) .sliderPrice {
+    color: cornflowerblue;
+  }
+  .sliderItem:nth-child(5) .sliderPrice {
+    color: cornsilk;
+  }
+  /* we are now starting for our 4 icons part*/
+  .features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  .feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;/*icon will be in center*/
+    text-align: center;
+  }
+  .featureIcon {
+    width: 50px;
+    height: 50px;
+  }
+  .featureTitle {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+  }
+  .featureDesc {
+    color: darkred;
+    width: 50%;
+    height: 100px;
+  }
+  /* now style for product*/
+  .product {
+    height: 100vh;
+    background-color: whitesmoke;
+    position: relative;
+   
+  }
+  /*NOW THIS IS FOR PAYMENT PAGE IF WE CLICK BUY NOW  */
+  .payment {
+    width: 500px;
+    height: 500px;
+    background-color:PINK;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(255, 4, 4, 0.3);
+  }
+  .payTitle {
+    font-size: 25px;
+    color:black;
+  }
+  label {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .payInput {
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+  .payInput::placeholder {
+    color: rgb(163, 163, 163);
+  }
+  .cardIcons {
+    display: flex;
+  }
+  .cardIcon {
+    margin-right: 10px;
+  }
+  .cardInfo {
+    display: flex;
+    justify-content: space-between;
+  }
+  .sm {
+    width: 30%;
+  }
+  .payButton {
+    position: absolute;
+    height: 40px;
+    bottom: -40;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #369e62;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  .close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+  }
+  .productImg {
+    width: 50%;
+  }
+  /* style for same product we choose*/
+  .productDetails {
+    position: absolute;
+    font-style: oblique;
+    top: 10%;
+    right: 0;
+    width: 40%;
+    padding: 50px;
+  }
+  .productTitle {
+    font-size: 75px;
+    font-weight: 900;
+  }
+  .productDesc {
+    font-style: 24px;
+    color: rgb(77, 7, 7);
+  }
+  .colors,
+  .sizes {
+    display: flex;
+    margin-bottom: 30px;
+  }
+  .color {
+    width: 32px;
+    height: 32px;
+    border-radius: 5px;
+    background-color: black;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  .color:last-child {
+    background-color: darkblue;
+  }
+  .size {
+    padding: 5px 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  .productButton {
+    float: right;
+    padding: 10px 20px;
+    background-color: darkgreen;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .productButton:hover {
+    background-color: white;
+    color: blue;
+  }
+  /* from here our gallery starts */
+  .gallery {
+    padding: 50px;
+    display: flex;
+  }
+  .galleryItem {
+    flex: 1;
+    padding: 50px;
+  }
+  .galleryImg {
+    width: 100%;
+  }
+  /* this is for after gallery  */
+  .newSeason {
+    display: flex;
+  } 
+  .nsItem {
+    flex: 1;
+    background-color: rgb(122, 21, 21);
+    color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .nsImg {
+    width: 100%;
+    height: 500px;
+  }
+  .nsTitle {
+    font-size: 40px;
+  }
+  .nsButton {
+    padding: 15px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  /* from here footer is start */
+  footer {
+    display: flex;
+  }
+  .footerLeft {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  .fMenuTitle {
+    font-size: 16px;
+  }
+  .fList {
+    padding: 0;
+    list-style: none;
+  }
+  .fListItem {
+    margin-bottom: 10px;
+    color: gray;
+    cursor: pointer;
+  }
+  .footerRight {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .fInput {
+    padding: 5px;
+  }
+  .fButton {
+    padding: 5px;
+    background-color: black;
+    color: white;
+  }
+  .fIcons{
+    display: flex;
+  }
+  .fIcon{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  .copyright{
+    font-weight: 300;
+    font-size: 14px;
+  }
